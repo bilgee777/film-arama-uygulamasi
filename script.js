@@ -26,7 +26,7 @@ function searchMovie() {
               <h2 class="text-xl font-semibold">${movie.Title}</h2>
               <p class="text-sm text-gray-400">${movie.Year}</p>
               <button onclick="getDetails('${movie.imdbID}')" class="mt-2 px-4 py-2 bg-red-600 rounded hover:bg-red-700">
-                Detayları Gör
+                
               </button>
             </div>
           `;
