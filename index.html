@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🎬 Film Arama</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 text-white min-h-screen p-6">
+
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-4xl font-bold mb-6 text-red-500">🎬 Film Arama Uygulaması</h1>
+    
+    <div class="flex gap-2 mb-8 justify-center">
+      <input id="searchInput" type="text" placeholder="Örn: Batman, Star Wars..."
+        class="w-full md:w-2/3 p-3 rounded-xl text-black focus:outline-none" />
+      <button onclick="searchMovie()" class="bg-red-600 px-5 py-3 rounded-xl hover:bg-red-700 transition">
+        Ara
+      </button>
+    </div>
+
+    <div id="movieResult" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3"></div>
+  </div>
+
+  <!-- 🔽 Modal bileşeni burada -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+    <div class="bg-zinc-800 text-white p-6 rounded-xl max-w-lg w-full relative">
+      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-300 hover:text-red-500 text-xl">&times;</button>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+      <p id="modalYear" class="text-sm text-gray-400 mb-2"></p>
+      <p id="modalGenre" class="mb-2"></p>
+      <p id="modalActors" class="mb-2"></p>
+      <p id="modalPlot" class="mb-4"></p>
+      <p id="modalRating" class="text-yellow-400 font-semibold"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
