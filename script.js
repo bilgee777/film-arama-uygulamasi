@@ -51,7 +51,7 @@ function getDetails(imdbID) {
       document.getElementById("modalPlot").innerText = `Konu: ${data.Plot}`;
       document.getElementById("modalRating").innerText = `IMDB Puanı: ⭐ ${data.imdbRating}`;
       
-      // Modal'ı göster
+      
       document.getElementById("modal").classList.remove("hidden");
     });
 }
